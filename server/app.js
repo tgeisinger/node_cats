@@ -3,12 +3,13 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var index = require('./routes/index');
+var cats = require('./routes/cats')
 
 app.set('port', (process.env.PORT || 5000));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/felines', module);
+app.use('/felines', cats);
 
 app.use('/', index);
 
