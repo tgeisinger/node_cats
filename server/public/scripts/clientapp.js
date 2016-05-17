@@ -5,6 +5,7 @@ $(document).ready(function() {
     var values = {};
     $.each($('#inputForm').serializeArray(), function(i, field) {
       values[field.name] = field.value;
+      console.log(values);
     });
 
     $.ajax({
